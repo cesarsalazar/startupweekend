@@ -7,7 +7,7 @@
     line-height: 105px
     background: transparent url(/images/sw_logo_150px.png) no-repeat scroll 0 0
     text-indent: 180px
-  
+      
   #description
     #images
       overflow: hidden
@@ -29,6 +29,17 @@
     padding: 1.5em
     h2
       margin: 0
+      a:hover
+        text-decoration: none
+        color: lighten($brand, 20%)
+  
+  #venue
+    @include clear
+    > div
+      width: 50%
+      float: left
+    #map
+      padding-top: 2em
   
   #credits
     margin-top: 3em

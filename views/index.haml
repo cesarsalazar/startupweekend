@@ -10,17 +10,23 @@
     %p Startup Weekend es un evento de un fin de semana completo de duración en el que un grupo de emprendedores y aspirantes a emprendedores pone manos a la obra en probar si una idea de negocio es viable. Es un espacio es el que personas con perfil técnico, de diseño y de negocio se juntan para desarrollar productos.
     
   #register
-    %h2 Regístrate ahora
+    %h2 
+      %a{:href => "http://mexicocity.startupweekend.org"} Regístrate ahora
   
   #venue
-    %h2 ¿Dónde y cuando será?
-    %p 
-      %strong Fecha:
-      %span 10 al 12 de junio de 2011
-    %p
-      %strong Lugar:
-      %span Sala Gustavo Petricioli - NAFIN, Av. Insurgentes Sur 1971, Col. Guadalupe Inn, México D.F.
-  
+    #details
+      %h2 ¿Dónde y cuando será?
+      %p 
+        %strong Fecha:
+        %span 10 al 12 de junio de 2011
+      %p
+        %strong Lugar:
+        %span Sala Gustavo Petricioli - NAFIN
+      %p
+        %strong Dirección: 
+        %span Av. Insurgentes Sur 1971, Col. Guadalupe Inn, México D.F.
+    #map
+      %iframe{:frameborder => "0", :height => "200", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=217798331451831111620.0004a279fde91ba00f36d&ll=19.351437,-99.18633&spn=0.008098,0.017123&z=15&output=embed", :width => "400"}
   #requirements
     %h2 ¿Qué necesito para participar?
     %ol
@@ -35,7 +41,7 @@
   #credits
     %p
       %span Fotgrafías de 
-      %a{:href => "http://www.flickr.com/photos/br1dotcom/5088870505/", :target => "blank"} Bruno Cordioli 
+      %a{:href => "http://www.flickr.com/photos/br1dotcom", :target => "blank"} Bruno Cordioli 
       %span bajo licencia
       %a{:href => "http://creativecommons.org/licenses/by/2.0/deed.en", :target => "blank"} Creative Commons,
       %span diseño web de
