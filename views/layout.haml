@@ -1,0 +1,11 @@
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+	%head
+		%title
+			= @title || 'Sinatra Base'
+		%meta{ :'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8' }
+		%script{ :src => 'http://code.jquery.com/jquery-1.4.4.min.js', :type => 'text/javascript' }
+		%link{:href => "http://fonts.googleapis.com/css?family=Maiden+Orange", :rel => "stylesheet", :type => "text/css"}/
+		= yield_content :head
+	%body
+		= yield

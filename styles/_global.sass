@@ -1,0 +1,48 @@
+@import 'reset', 'palette', 'fonts', 'mixins', 'forms'
+ 
+body
+  font-family: Georgia, serif
+  background: $light_brand
+  #content
+    @include box-shadow
+    @include main-content(750px)
+    padding: 3em
+h1
+  font-family: "Maiden Orange", Helvetica, Arial, sans-serif
+  font-size: 3.5em
+  margin-bottom: 0.5em
+  color: $brand
+  letter-spacing: -0.04em
+
+h2
+  font-family: "Maiden Orange", Helvetica, Arial, sans-serif
+  color: $brand
+  font-size: 2em
+  letter-spacing: -0.04em
+  margin-top: 1em
+  margin-bottom: 0.5em
+  
+p
+  margin-bottom: 1em
+  line-height: 1.5
+  color: $black
+
+a
+  color: $brand
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+ul
+  list-style: circle inside
+
+ol
+  list-style: decimal inside
+  
+li
+  margin-bottom: 1em
+  line-height: 1
+  color: $black
+ 
+  
+  

@@ -1,0 +1,38 @@
+@import 'global'
+
+#content
+  h1
+    display: block
+    height: 80px
+    line-height: 105px
+    background: transparent url(/images/sw_logo_150px.png) no-repeat scroll 0 0
+    text-indent: 180px
+  
+  #description
+    #images
+      overflow: hidden
+      clear: both
+      @include centered(735px)
+      img
+        padding-right: 5px
+        display: block
+        float: left
+    
+    p
+      margin: 1.5em 0
+      font-size: 1.2em
+      
+  #register
+    text-align: center
+    background: $light_gray
+    border: 1px solid $mild_gray
+    padding: 1.5em
+    h2
+      margin: 0
+  
+  #credits
+    margin-top: 3em
+    p
+      font-size: 0.8em
+      color: $gray
+    
