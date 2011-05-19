@@ -1,11 +1,11 @@
 !!! 5
 %html{ :xmlns => "http://www.w3.org/1999/xhtml" }
-	%head
-		%title
-			= @title || 'Startup Weekend Mexico City'
-		%meta{ :'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8' }
-		%link{:href => "http://fonts.googleapis.com/css?family=Maiden+Orange", :rel => "stylesheet", :type => "text/css"}/
-		= yield_content :head
+  %head
+    %title
+      = @title || 'Startup Weekend Mexico City'
+    %meta{ :'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8' }
+    %link{:href => "http://fonts.googleapis.com/css?family=Maiden+Orange", :rel => "stylesheet", :type => "text/css"}/
+    = yield_content :head
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-23451584-1']);
@@ -16,6 +16,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-	%body
-		= yield
-		
+  %body
+    = yield
+    
