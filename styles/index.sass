@@ -30,11 +30,13 @@
     #images
       overflow: hidden
       clear: both
-      @include centered(750px)
+      @include centered(800px)
       img
         padding-right: 10px
         display: block
         float: left
+        &:last-child
+          padding-right: 0
     
     p
       margin: 1.5em 0
