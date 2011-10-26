@@ -1,7 +1,7 @@
 @import 'reset', 'palette', 'fonts', 'mixins', 'forms'
  
 body
-  font-family: Georgia, serif
+  font-family: "Metrophobic", sans-serif
   background: $light_brand url(/images/clouds.jpg) no-repeat 50% 0
   #menu
     @include centered(900px)
@@ -13,12 +13,41 @@ body
       @include horizontal-list
       display: inline-block
       padding: 0.75em 2em
-      font-family: "Lucida Grande", sans-serif
       li
-        margin-left: 1.9em
-        margin-right: 1.9em
+        margin-left: 2em
+        margin-right: 2em
         a
           color: $white
+
+  #heading
+    position: relative
+    @include centered(860px)
+    padding-top: 1em
+    padding-bottom: 1em
+    h1
+      color: $contrast
+      display: block
+      margin-bottom: 0em
+      margin-top: 0.2em
+      text-indent: 70px
+      background: transparent url(/images/logo_contrast.png) no-repeat scroll 0 0
+      padding-top: 0.2em
+    h1.home
+      color: $brand
+      line-height: 114px  
+      text-indent: 250px
+      background: transparent url(/images/sw_logo_battle.png) no-repeat scroll 0 0
+      margin-top: 0
+      margin-bottom: 0.2em
+      padding-top: 0
+    h2.date
+      position: absolute
+      text-align: right
+      top: 114px
+      right: 100px
+      color: $contrast
+      margin: 0
+
   #content
     @include box-shadow
     @include main-content(800px)

@@ -1,24 +1,4 @@
 @import 'global'
-
-#heading
-  position: relative
-  @include centered(800px)
-  padding-top: 2em
-  padding-bottom: 1em
-  h1
-    display: block
-    height: 100px
-    line-height: 114px
-    background: transparent url(/images/sw_logo_battle.png) no-repeat scroll 0 0
-    text-indent: 250px
-    margin-bottom: 0.2em
-  h2.date
-    position: absolute
-    text-align: right
-    top: 114px
-    right: 100px
-    color: $contrast
-    margin: 0
     
 #content
   padding-top: 2em !important
@@ -135,9 +115,31 @@
     ul
       list-style: none
     li
-      overflow: auto
-      line-height: 1
-      margin-bottom: 0.5em
+      display: block
+      float: left
+      margin-right: 1em
+      width: 140px
+      overflow: hidden
+      img
+        float: left
+        margin-right: 10px
+      p
+        font-weight: bold
+        font-size: 0.8em
+      a.twitter
+        background: transparent url(/images/twitter.png) no-repeat scroll 0 0
+        display: block
+        float: left
+        width: 23px
+        height: 23px
+        text-indent: -5000px
+      a.email
+        background: transparent url(/images/personal.png) no-repeat scroll 0 0
+        display: block
+        width: 23px
+        height: 23px
+        text-indent: -5000px
+        float: left
       p
         margin: 0
 
