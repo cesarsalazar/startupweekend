@@ -1,39 +1,56 @@
 @import 'global'
 
-#content
-  padding-top: 2em !important
+#heading
   position: relative
+  @include centered(800px)
+  padding-top: 2em
+  padding-bottom: 1em
   h1
     display: block
     height: 100px
-    line-height: 105px
+    line-height: 114px
     background: transparent url(/images/sw_logo_battle.png) no-repeat scroll 0 0
-    text-indent: 200px
+    text-indent: 250px
     margin-bottom: 0.2em
   h2.date
     position: absolute
     text-align: right
-    top: 105px
-    right: 150px
+    top: 114px
+    right: 100px
     color: $contrast
     margin: 0
+    
+#content
+  padding-top: 2em !important
+  position: relative
+
   #sponsors
     overflow: hidden
     margin-bottom: 1em
     h3
-      font-size: 10pt
+      font-size: 0.75em
       font-family: Helvetica, Arial, sans-serif
-      margin-bottom: 1em
+      text-transform: uppercase
+      color: $gray
+      font-weight: normal
+      margin-bottom: 0.5em
     #gold
       margin-bottom: 1em
+      width: 35%
+      float: left
+      a 
+        margin: 2em 0 0 0 !important
+    
+    #silver
+      margin-bottom: 2em !important
+    
     #local
       margin-bottom: 1em
       overflow: hidden
       > div
-        width: 50%
-        float: left
+        margin-bottom: 0em
         a
-          margin: 0px 10px
+          margin: 0 3em 0 0
         a#innku img
           margin-top: 10px
         a#telepro img
@@ -68,7 +85,13 @@
           padding-top: 4px
         &#opentok
           padding-top: 4px
-
+  
+  #social
+    margin-bottom: 1em
+    iframe
+      &:first-child
+        height: 33px !important
+        
   #description
     #images
       overflow: hidden
@@ -80,12 +103,12 @@
         float: left
         &:last-child
           padding-right: 0
-    iframe
-      &:first-child
-        height: 33px !important
+
     p
       margin: 1.5em 0
       font-size: 1.2em
+      strong
+        color: $contrast
       
   #register
     text-align: center
@@ -117,9 +140,5 @@
       margin-bottom: 0.5em
       p
         margin: 0
-  #credits
-    margin-top: 3em
-    p
-      font-size: 0.8em
-      color: $gray
+
     

@@ -2,11 +2,37 @@
  
 body
   font-family: Georgia, serif
-  background: $light_brand
+  background: $light_brand url(/images/clouds.jpg) no-repeat 50% 0
+  #menu
+    @include centered(900px)
+    background: $brand
+    padding: auto 1em
+    @include round-corners(0px 0px 3px 3px)
+    @include box-shadow
+    ul
+      @include horizontal-list
+      display: inline-block
+      padding: 0.75em 2em
+      font-family: "Lucida Grande", sans-serif
+      li
+        margin-left: 1.9em
+        margin-right: 1.9em
+        a
+          color: $white
   #content
     @include box-shadow
     @include main-content(800px)
     padding: 3em
+  
+  #footer
+    margin-top: 2em
+    margin-bottom: 3em
+    text-align: center
+    
+    p
+      font-size: 0.8em
+      color: $gray
+    
 h1
   font-family: "Maiden Orange", Helvetica, Arial, sans-serif
   font-size: 3.5em

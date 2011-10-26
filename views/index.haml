@@ -1,13 +1,15 @@
 - content_for :head do
   %link{:rel => 'stylesheet', :href => '/stylesheets/index.css', :type => 'text/css'}
-#content
+        
+#heading
   %h1 Startup Weekend Mexico City
   %h2.date 11 al 13 de noviembre de 2011
-  #description
+#content 
+  #social
     :plain
       <a href="http://twitter.com/share" class="twitter-share-button" data-text="Por 2da vez, StartupWeekend en el DF. Si programas, diseñas o haces negocios, no dejes de vivir la experiencia #swdf" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
       <iframe src="http://www.facebook.com/plugins/like.php?app_id=100467290046637&amp;href=http%3A%2F%2Fstartupweekenddf.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
-      
+  #description      
     #images
       %img{:src => "/images/swdf2_1.jpg"}
       %img{:src => "/images/swdf2_2.jpg"}
@@ -115,20 +117,6 @@
   /       %span Puedes descargar tu kit de prensa aquí: 
   /       %a{:href => '/press/SWDF_press.zip'} Descarga
   
-  #credits
-    %p
-      %span Este evento es respaldado por
-      %a{:href => "http://startupweekend.org"} Startup Weekend
-      %span> , una organización sin fines de lucro.
-    %p
-      %span Fotografías de 
-      %a{:href => "http://www.flickr.com/dfectuoso17", :target => "blank"} Santiago Zavala 
-      %span bajo licencia
-      %a{:href => "http://creativecommons.org/licenses/by/2.0/deed.en", :target => "blank"} Creative Commons,
-      %span diseño web de
-      %a{:href => "http://cesarsalazar.mx", :target => "blank"} César Salazar
-      %span con el código disponible en 
-      %a{:href => "http://github.com/cesarsalazar/startupweekend", :target => "blank"} Github
-      %span> .
+  
 
       
