@@ -1,0 +1,51 @@
+!!! 5
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      = @title || 'Startup Weekend Mexico City + Geeks on a Plane'
+    %meta{ :'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8' }
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/goap.css", :rel => "stylesheet", :type => "text/css"}/
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23451584-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  %body      
+    #goap
+      #header
+        %img.logo{:src => "/images/outline_logo_green_horizontal.png"}/
+        %span +
+        %img.goap{:src => "/images/geeksonaplane_logo.png"}/
+        %p.teaser Startup Weekend Mexico City tendrá el gusto de recibir a nuestros amigos de Geeks on a Plane como mentores y jueces de la tercera edición del evento ¿Tienes una idea en mente? Tal vez sea momento de ponerla en marcha.
+      #panel
+        %h1 Jueces Invitados
+        #dave_mcclure
+          %img{:src => "/images/goap/dave_mcclure.jpg"}
+          %h2 Dave McClure
+          %h3 500 Startups
+        #adriana_tortajada
+          %img{:src => "/images/goap/adriana_tortajada.jpg"}
+          %h2 Adriana Tortajada
+          %h3 NAFIN
+        #david_weekly
+          %img{:src => "/images/goap/david_weekly.jpg"}
+          %h2 David Weekly
+          %h3 Mexican.VC
+        #bedy_yang
+          %img{:src => "/images/goap/bedy_yang.jpg"}
+          %h2 Bedy Yang
+          %h3 500 Startups
+        #hernan_fernandez
+          %img{:src => "/images/goap/hernan_fernandez.jpg"}
+          %h2 Hernán Fernández
+          %h3 Angel Ventures Mexico
+      #subscribe
+        %h1 11 al 13 de mayo de 2012. Cupo limitado.
+        %p Debido a la alta demanda del evento, te pedimos que te apuntes a la preventa. Mientras más pronto lo hagas, más posibilidades tendrás de tener un boleto.
+        %a{:href => "https://docs.google.com/spreadsheet/viewform?formkey=dGNPSndETUtzY2dXTnNIdlcxd1Bmd3c6MQ"} Quiero un lugar

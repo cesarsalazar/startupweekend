@@ -12,15 +12,9 @@ fieldset
   padding: 0.5em 1em
 
 .field
-  @include clear
+  @include clearfix
   padding: 0.5em 0
   padding-left: 0.2em
-
-label
-  display: block
-  margin-top: 0.5em
-  margin-right: 2em
-  margin-bottom: 0.2em
   
 input.text, input.file, textarea 
   line-height: 1.3em
@@ -45,9 +39,7 @@ input.radio
 input.checkbox
 
 input.submit, button.submit
-  @include submit
-  @include button-roundness
-  margin: 1em 0
+  @include button
   
 p.note
   color: $gray
