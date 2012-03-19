@@ -7,8 +7,8 @@ require 'sass'
 require 'rdiscount'
 
 get '/' do
-  # redirect '/goap'
-  haml :index
+  redirect '/goap'
+  # haml :index
 end
 
 get '/goap' do
