@@ -108,6 +108,18 @@ html, body
 
 #tickets
   @include centered
+  text-align: center
+  form
+    padding-left: 230px
+    input[type="email"]
+      font-family: "Open Sans", sans-serif
+      font-weight: 300
+      padding: 0.5em
+      float: left
+      width: 300px
+      margin-right: 5px
+    input[type="submit"]
+      @include button
   
 .parallax
   position: absolute
