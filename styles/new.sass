@@ -1,0 +1,141 @@
+@import "global"
+
+html, body
+  height: 3600px
+
+#footer-container
+  top: 3100px
+  
+#menu-container
+  position: fixed
+  z-index: 1000
+  width: 100%
+#menu
+  > a
+    @include button($contrast)
+    float: right
+    width: 100px
+    padding: 0.5em 1em
+    margin-top: 2px
+
+#heading
+  position: relative
+  z-index: 10
+  padding-top: 5em !important
+  text-align: center
+  @include centered
+  img
+    margin-bottom: 2em
+  p
+    font-size: 1.4em
+    text-shadow: none
+
+#pics
+  @include clearfix
+  @include centered
+  margin-bottom: 1em
+  > img
+    border: 10px solid #FFF
+    float: left
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+
+#sponsors
+  @include clearfix
+  @include centered 
+  background: rgba(255,255,255,0.6)
+  padding: 15px
+  margin-bottom: 3em
+  ul
+    list-style: none
+    li
+      display: block
+      float: left
+      margin-right: 30px
+      margin-bottom: 0
+      &:last-child
+        margin-right: 0px
+#program
+  @include centered(720px)
+  margin-bottom: 3em
+  
+#panel
+  @include centered
+  @include clearfix
+  margin-bottom: 3em
+  h1
+    text-align: center
+    margin-bottom: 0.5em
+  > div
+    float: left
+    margin-left: 0.4em
+    margin-right: 0.4em
+    text-align: center
+    width: 150px
+    &:first-of-type
+      margin-left: 0
+    &:last-of-type
+      margin-right: 0
+  img
+    border: 5px solid #FFF
+    margin-bottom: 0.25em
+  h2
+    margin-bottom: 0.25em
+    font-size: 0.9em
+    font-weight: 600
+  h3
+    margin-bottom: 0
+    font-size: 0.8em
+    font-weight: 300      
+
+#venue
+  @include centered
+  #address
+    float: left
+    width: 230px
+    h2
+      line-height: 1.2
+      margin-top: 0
+    p
+      margin-bottom: 0.5em
+  #map
+    height: 300px
+    float: right
+    border: 5px solid $white
+  
+.parallax
+  position: absolute
+  width: 100%
+  top: 0
+  background-position: 50% 0
+  background-repeat: no-repeat
+  height: 600px
+
+#bg-up
+  background-image: url(/images/clouds-up.png)
+  z-index: -2
+
+#bg-right
+  background-image: url(/images/clouds-float-right.png)
+  z-index: -4
+
+#bg-left
+  background-image: url(/images/clouds-float-left.png)
+  z-index: -5
+
+#bg-float
+  background-image: url(/images/clouds-float.png)
+  z-index: -6
+
+#bg-right2
+  background-image: url(/images/clouds-float-right.png)
+  z-index: -7
+
+#bg-left2
+  background-image: url(/images/clouds-float-left.png)
+  z-index: -8
+
+#bg-float2
+  background-image: url(/images/clouds-float.png)
+  z-index: -9

@@ -1,81 +1,59 @@
 @import 'reset', 'palette', 'fonts', 'mixins', 'forms'
  
+html
+  @include gradient(lighten(#3e7fd1,5), lighten(#3e7fd1,20), lighten(#3e7fd1,30))
+  border: none
 body
+  background: transparent url(/images/clouds-bg.png) no-repeat scroll 50% 0
   font-family: "Metrophobic", sans-serif
-  background: $light_brand url(/images/clouds.jpg) no-repeat 50% 0
-  #menu
-    @include centered(900px)
-    background: $brand
-    padding: auto 1em
-    @include round-corners(0px 0px 3px 3px)
-    @include box-shadow
-    ul
-      @include horizontal-list
-      display: inline-block
-      padding: 0.75em 2em
-      li
-        margin-left: 2em
-        margin-right: 2em
-        a
-          color: $white
-
-  #heading
-    position: relative
-    @include centered(860px)
-    padding-top: 1em
-    padding-bottom: 1em
-    h1
-      color: $contrast
-      display: block
-      margin-bottom: 0em
-      margin-top: 0.2em
-      text-indent: 70px
-      background: transparent url(/images/logo_contrast.png) no-repeat scroll 0 0
-      padding-top: 0.2em
-    h1.home
-      color: $brand
-      line-height: 114px  
-      text-indent: 250px
-      background: transparent url(/images/sw_logo_battle.png) no-repeat scroll 0 0
-      margin-top: 0
-      margin-bottom: 0.4em
-      padding-top: 0
-    h2.date
-      position: absolute
-      text-align: right
-      top: 120px
-      right: 82px
-      color: $contrast
-      margin: 0
-    p.powered
-      position: absolute
-      top: 86px
-      left: 445px
-
-  #content
-    @include box-shadow
-    @include main-content(800px)
-    padding: 3em
+  color: $black
+  font-size: 17px
+  #menu-container
+    background: $black
+    @include box-shadow    
+    #menu
+      // padding: 0 1em
+      @include intuitive-box
+      @include centered
+      ul
+        @include horizontal-list
+        display: inline-block
+        padding: 0.75em 0
+        li
+          margin-left: 1.5em
+          margin-right: 1.5em
+          text-transform: uppercase
+          &:first-child
+            margin-left: 0
+          &:last-child
+            margin-right: 0
+          a
+            color: $white
   
-  #footer
-    margin-top: 2em
-    margin-bottom: 3em
-    text-align: center
-    
-    p
-      font-size: 0.8em
-      color: $gray
+  #footer-container
+    background: transparent url(/images/footer.png) no-repeat scroll 50% 0
+    position: absolute
+    z-index: 500
+    width: 100%
+    @include clearfix
+    #footer
+      background: #000
+      margin-top: 470px
+      color: $white
+      text-align: center
+      padding: 2em 0
+      p
+        font-size: 0.8em
+        color: $gray
     
 h1
   font-family: "Maiden Orange", Helvetica, Arial, sans-serif
   font-size: 3.5em
   margin-bottom: 0.5em
-  color: $brand
   letter-spacing: -0.04em
-
+  text-align: center
+  
 h2
-  font-family: "Maiden Orange", Helvetica, Arial, sans-serif
-  color: $brand
   font-size: 2em
   letter-spacing: -0.04em
   margin-top: 1em
@@ -84,8 +62,6 @@ h2
 p
   margin-bottom: 1em
   line-height: 1.5
-  color: $black
-
 a
   color: $brand
   text-decoration: none
