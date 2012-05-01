@@ -1,10 +1,10 @@
 @import "global"
 
 html, body
-  height: 3600px
+  height: 4000px
 
 #footer-container
-  top: 3100px
+  top: 3500px
   
 #menu-container
   position: fixed
@@ -91,6 +91,8 @@ html, body
 
 #venue
   @include centered
+  @include clearfix
+  margin-bottom: 3em
   #address
     float: left
     width: 230px
@@ -103,6 +105,9 @@ html, body
     height: 300px
     float: right
     border: 5px solid $white
+
+#tickets
+  @include centered
   
 .parallax
   position: absolute
