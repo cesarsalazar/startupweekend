@@ -41,12 +41,17 @@ html, body
     &:last-child
       margin-right: 0
 
-#sponsors
+.sponsors
   @include clearfix
   @include centered 
   background: rgba(255,255,255,0.6)
   padding: 15px
   margin-bottom: 3em
+  &#local
+    margin-bottom: 1em
+    li:first-child
+      margin-left: 200px
+      margin-right: 115px
   ul
     list-style: none
     li
