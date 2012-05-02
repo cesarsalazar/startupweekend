@@ -6,18 +6,12 @@ require 'haml'
 require 'sass'
 require 'rdiscount'
 
+before do
+  cache_control( :public, :must_revalidate, :max_age => 3600 ) unless development?
+end
+
 get '/' do
-  # redirect '/goap'
-  # haml :index
   haml :new
-end
-
-get '/old' do
-  haml :index
-end
-
-get '/goap' do
-  haml :goap, :layout => false
 end
 
 get '/programa' do
