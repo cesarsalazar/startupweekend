@@ -1,10 +1,10 @@
 @import "global"
 
 html, body
-  height: 4000px
+  height: 7000px
 
 #footer-container
-  top: 3500px
+  top: 6500px
   
 #menu-container
   position: fixed
@@ -68,34 +68,27 @@ html, body
   @include centered(720px)
   margin-bottom: 3em
   
-#panel
-  @include centered
+#judges, #coaches
+  @include centered(720px)
   @include clearfix
   margin-bottom: 3em
+  > div
+    @include clearfix
   h1
     text-align: center
     margin-bottom: 0.5em
-  > div
-    float: left
-    margin-left: 0.4em
-    margin-right: 0.4em
-    text-align: center
-    width: 150px
-    &:first-of-type
-      margin-left: 0
-    &:last-of-type
-      margin-right: 0
   img
     border: 5px solid #FFF
-    margin-bottom: 0.25em
+    float: left
+    margin-right: 2em
   h2
     margin-bottom: 0.25em
-    font-size: 0.9em
-    font-weight: 600
+
   h3
-    margin-bottom: 0
-    font-size: 0.8em
-    font-weight: 300      
+    margin-bottom: 0.5em
+    font-weight: 300 
+  p.bio
+    overflow: hidden
 
 #venue
   @include centered
