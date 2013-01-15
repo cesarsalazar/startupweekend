@@ -11,31 +11,7 @@ before do
 end
 
 get '/' do
-  haml :new
-end
-
-get '/programa' do
-  haml :programa
-end
-
-get '/participantes' do
-  haml :participantes
-end
-
-get '/mentores' do
-  haml :mentores
-end
-
-get '/lugar' do
-  haml :lugar
-end
-
-get '/inscripciones' do
-  haml :inscripciones
-end
-
-get '/equipo' do
-  haml :equipo
+  haml :index
 end
 
 get '/stylesheets/*' do
