@@ -15,12 +15,34 @@ $(function(){
   var left2 = $('#bg-right2').css('top','1800px');
   var right2 = $('#bg-left2').css('top','2300px');
 
-  var period = 0;
-  $(window).on('scroll',function(e){
-    parallaxScroll();
-  });
+  var _ = {}
+  _.throttle = function(func, wait) {
+    var context, args, timeout, result;
+    var previous = 0;
+    var later = function() {
+      previous = new Date;
+      timeout = null;
+      result = func.apply(context, args);
+    };
+    return function() {
+      var now = new Date;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0) {
+        clearTimeout(timeout);
+        timeout = null;
+        previous = now;
+        result = func.apply(context, args);
+      } else if (!timeout) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
 
   var parallaxScroll = function () {
+    console.log('para para parallax')
     var scrolled = $(window).scrollTop();
     up.css('top',(40-(scrolled*.15))+'px');
     horz1.css('top',(500-(scrolled*.35))+'px');
@@ -30,5 +52,9 @@ $(function(){
     left2.css('top',(1800-(scrolled*.10))+'px');
     right2.css('top',(2300-(scrolled*.70))+'px');
   }
+
+  var scrollListener = _.throttle(parallaxScroll, 1000/30); // 30 FPS
+
+  $(window).on('scroll', scrollListener);
 
 });
