@@ -43,13 +43,13 @@ $(function(){
 
   var parallaxScroll = function () {
     var scrolled = $(window).scrollTop();
-    up.css('transform','translate3d(0,'+((scrolled*.15))+'px, 0)');
-    horz1.css('transform','translate3d(0,'+(500-(scrolled*.35))+'px, 0)');
-    left1.css('transform','translate3d(0,'+(900-(scrolled*.60))+'px, 0)');
-    right1.css('transform','translate3d(0,'+(1300-(scrolled*.85))+'px, 0)');
-    horz2.css('transform','translate3d(0,'+(1800-(scrolled*1))+'px, 0)');
-    left2.css('transform','translate3d(0,'+(1800-(scrolled*.10))+'px, 0)');
-    right2.css('transform','translate3d(0,'+(2300-(scrolled*.70))+'px, 0)');
+    up.css('top',((scrolled*.15))+'px');
+    horz1.css('top',(500-(scrolled*.35))+'px');
+    left1.css('top',(900-(scrolled*.60))+'px');
+    right1.css('top',(1300-(scrolled*.85))+'px');
+    horz2.css('top',(1800-(scrolled*1))+'px');
+    left2.css('top',(1800-(scrolled*.10))+'px');
+    right2.css('top',(2300-(scrolled*.70))+'px');
   }
 
   var scrollListener = _.throttle(parallaxScroll, 50);
