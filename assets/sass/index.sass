@@ -1,8 +1,13 @@
 @import "global"
 
-$top-padding: 188px
+$top-padding: 180px
 $menu-w: 18.54%
 $header-w: 30%
+
+body
+  -webkit-transition: background-color 0.3s ease-in-out
+  transition: background-color 0.3s ease-in-out
+
 
 #global-menu
   position: fixed
@@ -14,7 +19,6 @@ $header-w: 30%
   header
     width: 150px
     height: 330px
-    background: #333
     margin: 30px auto 0
     img
       max-width: 100%
@@ -35,6 +39,7 @@ article
     h2
       font-family: 'League Gothic'
       font-size: 4em
+      margin-top: 0
     top: 0
     left: 0
     position: fixed
@@ -47,9 +52,11 @@ article
     transition: opacity 0.3s ease-in-out
     .wrap
       width: $header-w
+      color: white
   .content
     h2
       font-family: 'League Gothic'
+    color: white
     width: 48.54%
     float: right
     padding-top: $top-padding
@@ -57,19 +64,21 @@ article
     opacity: 0
 
 article.fixed
-  .section-header, .content
+  .section-header
+    opacity: 1
+    z-index: 8
+  .content
     opacity: 1
 
 .sponsors
   @include clearfix
-  @include centered 
-  background: rgba(255,255,255,0.6)
+  background: white
   padding: 15px
   margin-bottom: 3em
   &#local
     margin-bottom: 1em
     li
-      width: 25%
+      width: auto
       text-align: center
       margin-right: 0
       a
