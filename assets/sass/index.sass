@@ -23,13 +23,16 @@ body
     img
       max-width: 100%
   .menu
+    width: 150px
+    margin: 30px auto
     a
       display: block
+      padding: 8px 5px
       &.tickets_btn
         background: white
-        width: 100px
-        padding: 0.5em 1em
-        margin-top: 2px
+        width: 100%
+      &.active
+        font-weight: bold
 
 article
   width: 78.54%
@@ -40,6 +43,7 @@ article
       font-family: 'League Gothic'
       font-size: 4em
       margin-top: 0
+      text-align: left
     top: 0
     left: 0
     position: fixed
@@ -97,12 +101,10 @@ article.fixed
       &:last-child
         margin-right: 0px
 
-#tickets
-  text-align: center
+.newsletter
   form
-    padding-left: 230px
     input[type="email"]
-      font-family: "Open Sans", sans-serif
+      display: inline-block
       font-weight: 300
       padding: 0.5em
       float: left
