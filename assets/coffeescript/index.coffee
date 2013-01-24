@@ -1,14 +1,20 @@
+images = [
+  "/images/bgs/home.png"
+  "/images/bgs/program.png"
+  "/images/bgs/judges.png"
+  "/images/bgs/judges.png"
+  "/images/bgs/tickets.png"
+  "/images/bgs/tickets.png"
+  "/images/bgs/newsletter.png"
+]
+for image in images
+  do ->
+    img = new Image()
+    img.src = image
+
 $ ->
   $menu = $('nav.menu')
-  $.backstretch([
-    "/images/bgs/home.png"
-    "/images/bgs/program.png"
-    "/images/bgs/judges.png"
-    "/images/bgs/judges.png"
-    "/images/bgs/tickets.png"
-    "/images/bgs/tickets.png"
-    "/images/bgs/newsletter.png"
-  ])
+  $.backstretch(images)
   $('body').data('backstretch').pause()
 
   $('article .content').waypoint
@@ -17,6 +23,7 @@ $ ->
       $current = $(this).closest('article')
       $current = $current.prev() if direction is 'up'
 
+      $('body').data('backstretch').show($current.index() - 1)
       hash = $current.attr('id')
       $current.addClass('fixed')
       $menu.find('.active').removeClass('active')
@@ -28,7 +35,6 @@ $ ->
 
       $('body').css
         backgroundColor: "##{$current.data('bg')}"
-      .data('backstretch').show($current.index() - 1)
 
     offset: 180
 
