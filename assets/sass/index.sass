@@ -1,45 +1,64 @@
 @import "global"
 
-html, body
-  height: 7000px
+$top-padding: 188px
+$menu-w: 18.54%
+$header-w: 30%
 
-#footer-container
-  top: 6500px
-  
-#menu-container
+#global-menu
   position: fixed
-  z-index: 1000
-  width: 100%
-#menu
-  > a
-    @include button($contrast)
-    float: right
-    width: 100px
-    padding: 0.5em 1em
-    margin-top: 2px
-
-#heading
-  position: relative
+  left: 0
+  top: 0
+  width: 18.54%
+  height: 100%
   z-index: 10
-  padding-top: 5em !important
-  text-align: center
-  @include centered
-  img
-    margin-bottom: 2em
-  p
-    font-size: 1.4em
-    text-shadow: none
+  header
+    width: 150px
+    height: 330px
+    background: #333
+    margin: 30px auto 0
+    img
+      max-width: 100%
+  .menu
+    a
+      display: block
+      &.tickets_btn
+        background: white
+        width: 100px
+        padding: 0.5em 1em
+        margin-top: 2px
 
-#pics
-  @include clearfix
-  @include centered
-  margin-bottom: 1em
-  > img
-    border: 10px solid #FFF
-    float: left
-    margin-right: 30px
-    &:last-child
-      margin-right: 0
+article
+  width: 78.54%
+  margin-left: $menu-w
+  clear: both
+  .section-header
+    h2
+      font-family: 'League Gothic'
+      font-size: 4em
+    top: 0
+    left: 0
+    position: fixed
+    z-index: 1
+    height: 100%
+    margin-left: $menu-w
+    padding-top: $top-padding
+    opacity: 0
+    -webkit-transition: opacity 0.3s ease-in-out
+    transition: opacity 0.3s ease-in-out
+    .wrap
+      width: $header-w
+  .content
+    h2
+      font-family: 'League Gothic'
+    width: 48.54%
+    float: right
+    padding-top: $top-padding
+    min-height: 784px
+    opacity: 0
+
+article.fixed
+  .section-header, .content
+    opacity: 1
 
 .sponsors
   @include clearfix
@@ -68,51 +87,8 @@ html, body
       margin-bottom: 0
       &:last-child
         margin-right: 0px
-#program
-  @include centered(720px)
-  margin-bottom: 3em
-  
-#judges, #coaches, #facilitator
-  @include centered(720px)
-  @include clearfix
-  margin-bottom: 3em
-  > div
-    @include clearfix
-  h1
-    text-align: center
-    margin-bottom: 0.5em
-  img
-    border: 5px solid #FFF
-    float: left
-    margin-right: 2em
-  h2
-    margin-bottom: 0.25em
-
-  h3
-    margin-bottom: 0.5em
-    font-weight: 300 
-  p.bio
-    overflow: hidden
-
-#venue
-  @include centered
-  @include clearfix
-  margin-bottom: 3em
-  #address
-    float: left
-    width: 230px
-    h2
-      line-height: 1.2
-      margin-top: 0
-    p
-      margin-bottom: 0.5em
-  #map
-    height: 350px
-    float: right
-    border: 5px solid $white
 
 #tickets
-  @include centered
   text-align: center
   form
     padding-left: 230px
@@ -125,11 +101,3 @@ html, body
       margin-right: 5px
     input[type="submit"]
       @include button
-  
-.parallax
-  position: absolute
-  width: 100%
-  top: 0
-  background-position: 50% 0
-  background-repeat: no-repeat
-  height: 600px
