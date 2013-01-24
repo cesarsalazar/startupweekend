@@ -14,7 +14,7 @@ for image in images
 
 $ ->
   $menu = $('nav.menu')
-  $.backstretch(images)
+  $.backstretch(images, {fade: 0})
   $('body').data('backstretch').pause()
 
   $('article .content').waypoint
