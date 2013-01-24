@@ -1,0 +1,10 @@
+$helvetica: Helvetica, Arial, Verdana, sans-serif;
+
+@mixin font-face($font-family, $url) {
+   @font-face {
+      font-family: '#{$font-family}';
+      src: url('#{$url}.eot?') format('eot'), url('#{$url}.woff') format('woff'), url('#{$url}.ttf') format('truetype');
+   }
+}
+
+@include font-face(League Gothic, /fonts/leaguegothic-regular-webfont);
