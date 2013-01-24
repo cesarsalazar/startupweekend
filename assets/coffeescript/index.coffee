@@ -1,9 +1,9 @@
 images = [
   "/images/bgs/home.png"
   "/images/bgs/program.png"
+  "/images/bgs/spacer.png"
   "/images/bgs/judges.png"
-  "/images/bgs/judges.png"
-  "/images/bgs/tickets.png"
+  "/images/bgs/spacer.png"
   "/images/bgs/tickets.png"
   "/images/bgs/newsletter.png"
 ]
