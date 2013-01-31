@@ -40,6 +40,7 @@ class SWApplication < Sinatra::Base
   end
 
   get '/' do
+    # Encoding.default_internal = Encoding::UTF_8
     haml :index
   end
 end
