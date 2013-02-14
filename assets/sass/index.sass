@@ -75,29 +75,28 @@ article.fixed
     opacity: 1
 
 .sponsors
-  background: white
-  padding: 15px
-  margin-bottom: 1em
   &#local
     margin-bottom: 0
-    background: rgba(255,255,255,0.2)
-    li
-      width: auto
-      text-align: center
-      a
-        cursor: pointer
+    background: transparent
+    &:before
+      content: "Patrocinadores locales"
+      display: block
+      margin-bottom: 15px
   &#global
-    li
-      min-width: 15%
-      text-align: center
+    background: white
+    padding: 15px
+    margin-bottom: 1em
   ul
     list-style: none
     display: table
     li
       display: table-cell
       vertical-align: middle
-      padding-right: 15px
+      text-align: center
+      width: 200px
       margin-bottom: 0
+      a
+        cursor: pointer
       &:last-child
         padding-right: 0px
 
