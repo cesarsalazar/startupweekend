@@ -77,28 +77,29 @@ article.fixed
 .sponsors
   background: white
   padding: 15px
-  margin-bottom: 3em
+  margin-bottom: 1em
   &#local
-    margin-bottom: 1em
+    margin-bottom: 0
+    background: rgba(255,255,255,0.2)
     li
       width: auto
       text-align: center
-      margin-right: 0
       a
         cursor: pointer
   &#global
     li
       min-width: 15%
       text-align: center
-      margin-right: 0
   ul
     list-style: none
+    display: table
     li
-      display: block
-      float: left
+      display: table-cell
+      vertical-align: middle
+      padding-right: 15px
       margin-bottom: 0
       &:last-child
-        margin-right: 0px
+        padding-right: 0px
 
 .people
   margin-bottom: 4em
