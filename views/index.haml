@@ -1,96 +1,202 @@
 - content_for :head do
   %link{:rel => 'stylesheet', :href => '/stylesheets/index.css', :type => 'text/css'}
-        
-#heading
-  %h1.home Startup Weekend Mexico City
-  %p.powered powered by the Kauffman Foundation
-  %h2.date 11 al 13 de noviembre de 2011
-#content 
-  #social
+  %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js", :type => "text/javascript"}
+  %script(src="/js/waypoints.min.js")
+  %script(src="/js/backstretch.js")
+  %script(src="/javascripts/index.js")
+%article#home.fixed(data-bg="00c49e" data-color="355147")
+  .section-header
+    %h2
+      Aprende a construir
+      %br
+      una empresa
+      %br
+      en 54 horas
+    .wrap
+      %p Startup Weekend es un fin de semana en el que tendrás la oportunidad de trabajar con personas de distintos perfiles para probar si tu idea de negocio es viable y llevarla hasta su máximo potencial. No te pierdas esta experiencia inolvidable.
+
+    #local.sponsors
+      %ul
+        %li#blackberry
+          %img{:src => "/images/locales/blackberry.png"}
+        %li#enova
+          %img{:src => "/images/locales/enova.png"}
+        %li#cityexpress
+          %img{:src => "/images/locales/cityexpress.png"}
+        %li#pagofacil
+          %img{:src => "/images/locales/pagofacil.png"}
+
+  .content
+    #global.sponsors
+      %ul
+        %li#google_entrepreneurs
+          %img{:src => "/images/globales/google.png"}
+        %li#dotco
+          %img{:src => "/images/globales/dotco.png"}
+      %ul
+        %li#domaincom
+          %img{:src => "/images/globales/domaincom.jpeg"}
+        %li#sendgrid
+          %img{:src => "/images/globales/sendgrid.png"}
+      %ul
+        %li#bizspark
+          %img{:src => "/images/globales/bizspark.png"}
+        %li#aws
+          %img{:src => "/images/globales/aws.png"}
+
+
+%article#program(data-bg="008357" data-color="0e3829")
+  .section-header
+    %h2 Programa
+    .wrap
+      %p Startup Weekend es un fin de semana en el que tendrás la oportunidad de trabajar con personas de distintos perfiles para probar si tu idea de negocio es viable y llevarla hasta su máximo potencial. No te pierdas esta experiencia inolvidable.
+  .content
+    :markdown
+      ## Inicio
+      La cita es el **viernes 15 de febrero a las 6:00 pm**. El evento inicia formalmente a las 7:00pm con una introducción a la dinámica y una sesión de networking para conocer a los demás asistentes.
+
+      ## Selección de ideas
+      Tendrás la oportunidad de presentar una idea de negocio durante un minuto. Las mejores ideas serán seleccionadas por los propios participantes.
+
+      ## Formación de equipos
+      Podrás participar en la idea seleccionada que más te apasione (¿la tuya quizá?). Un buen equipo será multidisciplinario, con personas técnicas, diseñadores y gente de negocios a bordo.
+
+      ## Validación inicial de mercado
+      Antes de crear cualquier cosa es crucial preguntarse ¿quién es mi cliente? ¿qué le duele? ¿qué tan grande es mi mercado? ¿está creciendo? ¿cómo podría generar dinero?
+
+      ## Desarrollo de producto
+      Ya con más información, pasaremos a desarrollar una primera versión del producto que sea mínimamente viable, es decir, que resuelva el problema fundamental para al menos un cliente.
+
+      ## Validación de la oferta de valor
+      Consideranto que nuestro MVP es sólo un prototipo, es importante probarlo con clientes reales para aprender sobre este mismo ¿realmente resuelve el problema? ¿es fácil de entender? ¿refleja su valor ante el cliente?
+
+      ## Presentación
+      Por último, cada equipo tendrá 5 minutos para presentar y 3 minutos de preguntas y respuestas ante un panel de emprendedores e inversionistas.
+
+      Si bien Startup Weekend tiene un formato de competencia, lo importante (y lo decimos en serio) no es quién gana, sino quienes logran tener un progreso en su  capacidad de ejecutar rápidamente un negocio. Startup Weekend es un evento de aprendizaje experiencial y de relacionamiento para presentes y futuros emprendedores.
+    
+      ## Finalización
+      En esta ocasión, **el evento terminará a las 9:00pm del domingo 17 de Febrero** con la premiación del equipo ganador. Después de que finalice el evento, invitamos a todos los asistentes, mentores y jueces a un "after-party" en el que podremos convivir en un ambiente mucho más relajado.
+
+%article#coaches(data-bg="899437" data-color="3a3d18")
+  .section-header
+    %h2
+      Facilitador
+      %br
+      y Coaches
+    .wrap
+      %p Startup Weekend es un fin de semana en el que tendrás la oportunidad de trabajar con personas de distintos perfiles para probar si tu idea de negocio es viable y llevarla hasta su máximo potencial. No te pierdas esta experiencia inolvidable.
+  .content
+    .people#adam
+      %img{:src => "/images/people/adam_stelle.jpg"}
+      %h2 Adam Stelle
+      %p.bio Adam forma parte del Equipo de Liderazgo de Startup Weekend a nivel Global. Antes de integrarse a esta organización en Septiembre de 2010, Adam trabajó con emprendedores de escasos recursos en el sur de África, donde diseñó e implementó un modelo de negocios de micro franquicias alrededor de energías renovables. Adam cuenta con un BA en Filosofía por parte de la University of British Columbia, en Canadá.
+
+    .people#alejandra_castro
+      %img{:src => "/images/people/alejandra_castro.jpg"}
+      %h2 Alejandra Castro
+      %p.bio Egresada de Diseño Gráfico de la Universidad Iberoamericana, Alejandra empezó trabajando en publicidad BTL con marcas como Chivas, Benson & Hedges, Mabe y Vitamin Water. Después de la publicidad, encontró lo que realmente le gusta en el mundo de las aplicaciones móviles y el área digital. Ha hecho aplicaciones para Samsung en BADA y Android, un juego interactivo para el Excélsior con temática de las elecciones, y actualmente acaba de entregar una aplicación para el ICyT del DF, la cual está próxima a ser lanzada en la App Store.
+
+    .people#carmen_ayala
+      %img{:src => "/images/people/carmen_ayala.jpg"}
+      %h2 Carmen Ayala
+      %h3 Directora, Mandalah
+      %p.bio Actual directora de Mandalah, Consultora de Innovación, una empresa global especializada en brindar innovación de valor a marcas y empresas a través del estudio del comportamiento humano y de tendencias socioculturales emergentes. Carmen estudió Comunicación Social con especialidad en Semiótica en la UAM, así como Creatividad Estratégica en Underground Argentina y Marketing Creativo en la Universidad Texas A&M.
+
+    .people#fedecasas
+      %img{:src => "/images/people/federico_casas.jpg"}
+      %h2 Federico Casas
+      %h3 Co-fundador, Semana
+      %p.bio Fede creó su primer empresa (Kin Camp) en el 2005 y la vendió en el 2008 (después recompró parte en el 2010 y hoy es socio otra vez). Ha fundado varias empresas más como SEMANA (agencia de SM), Aventones (plataforma de ridesharing), OSOM (app para recolectar tu reputación) y actualmente está desarrollando 3 proyectos nuevos, aunque también ha fracasado en varios (como unos 5). Como pasatiempo tiene un par de negocios inmobiliarios y es fan de los Pumas.
+
+    .people#jorge_soto
+      %img{:src => "/images/people/jorge_soto.jpg"}
+      %h2 Jorge Soto
+      %h3 Co-fundador, CitiVox
+      %p.bio Jorge ha estado involucrado en el diseño e implementación de proyectos que usan tecnología para empoderar a los ciudadanos e instituciones de México, Latinoamérica y África. En 2010 fundó CitiVox, una startup que usa tecnología para facilitar la comunicación entre ciudadanos y las instituciones que los atienden. CitiVox empodera a líderes de comunidad, a las personas y a funcionarios públicos para transformar los reportes ciudadanos en información para realizar acciones concretas. A sus 27 años, es uno de los emprendedores de Endeavor Global más jóvenes alrededor del mundo y en mayo de 2012 recibió el reconocimiento TR35 por parte del MIT and Technology Review, como uno de los 10 mejores innovadores de menos de 35 años en México.
+
+    .people#mike_lisavich
+      %img{:src => "/images/people/mike_lisavich.jpg"}
+      %h2 Mike Lisavich
+      %h3 Facilitador, FastSwitch
+      %p.bio Nacido en Boston, MA, cuenta con una maestría en negocios por parte de la Universidad del Estado de Ohio. Mike es un emprendedor y asesor que se especializa en trabajar con compañías jóvenes de tecnología. Como co-fundador y administrador del programa de aceleración 10-xelerator en Columbus, OH, ha pasado dos años ayudando a los egresados recaudar más de $ 6.5 millones en capital semilla. Adicionalmente, fungió como asesor personal para la empresa Fast Switch Ventures en temas de inversión y emprendimiento.
+
+    .people#navid
+      %img{:src => "/images/people/navid.jpg"}
+      %h2 Navid Safabakhsh
+      %h3 CEO y Co-fundador, Freshout
+      %p.bio Navid es el CEO y Co-Fundador de Freshout, una compañía de tecnología que diseña, desarrolla, publica productos y servicios cada año. Recientemente, Freshout introdujo al mercado su primer producto llamado Breezi, una poderosa plataforma en línea que te permite diseñar y construir sitios web de una manera muy sencilla, fresca y divertida.
+	  
+    .people#eric
+      %img{:src => "/images/people/eric.jpg"}
+      %h2 Eric Northam 
+      %h3 CEO y Co-fundador, EasyBroker
+      %p.bio Eric es el CEO y Co-Fundador de EasyBroker, una herramienta que ayuda a los agentes de bienes raíces a promover sus propiedades de manera eficiente. Eric es un emprendedor veterano que ha participado en 4 startups y asesorado a muchas más. Es un geek nato que disfruta de trabajar con computadoras desde que su padre le regaló una IBM 8086 en la primaria. Eric es también un gran devoto de la metodología Lean Startup.
+
+%article#judges(data-bg="af841d" data-color="28160e")
+  .section-header
+    %h2 Jueces
+  .content
+    .people#cemre
+      %img{:src => "/images/people/cemre.jpg"}
+      %h2 Cemre Gungor
+      %h3
+        Co-fundador,
+        %a(href="http://branch.com") Branch.com
+      %p.bio
+        Cemre es el co-fundador encargado del diseño de Branch, una nueva forma de expresar opiniones en linea.  Branch recientemente salió al público y sus inversionistas son mejor conocidos por haber creado Twitter.
+
+      %p
+        Cemre tiene una maestría en medios experimentales de NYU y trabajó anteriormente como diseñador de producto en Etsy. En sus palabras, agarró la 
+        %em fiebre del startup
+        cuando participó en StartupBus 2011 y su equipo, TripMedi, fue el ganador. Es originario de Ankara, Turquía y vive actualmente en Nueva York.
+
+    .people#cesar_salazar
+      %img{:src => "/images/people/cesar_salazar.jpg"}
+      %h2 César Salazar
+      %h3 Venture Partner, 500 Startups
+      %p.bio César Salazar es Venture Partner de 500 Startups. Desde su posición, le toca trabajar con algunas de las startups más prometedoras de Latinoamérica de habla hispana, particularmente de México. Antes de esto, César fue uno de los socios fundadores de Mexican.VC, es fondo de capital semilla y aceleradora de startups en Internet más visible de México. Mexican.VC fue adquirido en 2012 por 500 Startups y fue así como César obtuvo su actual puesto.
+ 
+      %p.bio César fue emprendedor por más de una década antes de pasarse al otro lado de la mesa. Es conocido por fungir como un jugador clave en el desarrollo del ecosistema de emprendimiento mexicano. A través de iniciativas como Hackspedition, Startup Dojo y SuperHappyDevHouse, ha promovido el emprendimiento tecnológico en su país natal. Adicionalmente, es un asesor regional de Startup Weeekend.
+ 
+      %p.bio A pesar de definirse como un diseñador de interacción, César es Ingeniero Industrial y de Sistemas por el Tecnológico de Monterrey.
+
+    .people#hector_iriarte
+      %img{:src => "/images/people/hector_iriarte.jpg"}
+      %h2 Héctor Iriarte
+      %h3 CEO, TuOla.mx
+      %p.bio Héctor es fundador de Tu Ola, un programa digital de recompensas por realizar acciones verdes. Antes de Tu Ola, Héctor ya había fundado dos compañías relacionadas con temas ambientales. Tiene más de 15 años de experiencia internacional en consultoría, tecnología y finanzas en empresas como KPMG, Oracle y Gap. Estudió Ingeniería Industrial en la Universidad Panamericana y tiene un MBA por la Universidad de California en Berkeley. Jugador de rugby y aficionado a las actividades al aire libre.
+
+%article#venue(data-bg="5e3319" data-color="ead3ac")
+  .section-header
+    %h2 Sede
+    %p
+      %a(href="http://goo.gl/maps/FpFeQ" target="_blank")
+        %img{:src => "http://maps.google.com/maps/api/staticmap?center=19.422578,-99.159530&zoom=15&markers=19.422578,-99.159530&size=400x647&sensor=false"}
+    
+  .content
+    %h2 ENOVA
+    %p
+      Córdoba 56
+      %br
+      Casi esquina con Durago
+      %br
+      Col. Roma Norte
+      %br
+      C.P. 06700
+%article#tickets(data-bg="b42050" data-color="efb9cf")
+  .section-header
+    %h2 Tickets
     :plain
-      <a href="http://twitter.com/share" class="twitter-share-button" data-text="Por 2da vez, StartupWeekend en el DF. Si programas, diseñas o haces negocios, no dejes de vivir la experiencia #swdf" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-      <iframe src="http://www.facebook.com/plugins/like.php?app_id=100467290046637&amp;href=http%3A%2F%2Fstartupweekenddf.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
-  #description      
-    #images
-      %img{:src => "/images/swdf2_1.jpg"}
-      %img{:src => "/images/swdf2_2.jpg"}
-      %img{:src => "/images/swdf2_3.jpg"}
-    %p 
-      %strong ¡Construye un startup en 54 horas!
-      %span Startup Weekend es un evento de un fin de semana completo de duración en el que un grupo de emprendedores y aspirantes a emprendedores pone manos a la obra en probar si una idea de negocio es viable. Es un espacio es el que personas con perfil técnico, de diseño y de negocio se juntan para desarrollar productos.
+      <iframe  src="http://www.eventbrite.com/tickets-external?eid=5026849442&ref=etckt" frameborder="0" height="480" width="900" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+  .content
 
-  #sponsors
-    #gold
-      %h3 Patrocinador Gold
-      %a#astrata{:href => "http://astrata.mx", :target => "blank"}
-        %img{:src => "/images/logos/astrata.png"}
-    #local    
-      #silver  
-        %h3 Patrocinadores Silver
-        %a#innku{:href => "http://innku.com", :target => "blank"}
-          %img{:src => "/images/logos/innku.png"}
-        %a#mexicoinnova{:href => "http://mexicoinnova.com", :target => "blank"}
-          %img{:src => "/images/logos/mexicoinnova.png"}
-        %a#telepro{:href => "http://www.telepro.com.mx/", :target => "blank"}
-          %img{:src => "/images/logos/telepro.png"}
-      #allies
-        %h3 Aliados estratégicos
-        %a#itesm{:href => "http://www.csf.itesm.mx/micampus/", :target => "blank"}
-          %img{:src => "/images/logos/itesm.png"}
-        %a#mexicanvc{:href => "http://mexican.vc", :target => "blank"}
-          %img{:src => "/images/logos/mexicanvc.png"}
-        %a#techba{:href => "http://techbasv.com/bootcamp", :target => "blank"}
-          %img{:src => "/images/logos/techba.png"}
-    #global
-      %h3 Patrocinadores Globales
-      %a#bizspark{:href => "http://www.microsoft.com/bizspark/Default.aspx", :target => "blank"}
-        %img{:src => "/images/logos/bizspark.png"}/
-      %a#aws{:href => "http://aws.amazon.com/", :target => "blank"}
-        %img{:src => "/images/logos/aws.png"}/
-      %a#twilio{:href => "http://www.twilio.com/", :target => "blank"}
-        %img{:src => "/images/logos/twilio.png"}/
-      %a#odesk{:href => "https://www.odesk.com", :target => "blank"}
-        %img{:src => "/images/logos/odesk.png"}/
-      %a#opentok{:href => "http://www.tokbox.com/opentok/api", :target => "blank"}
-        %img{:src => "/images/logos/opentok.png"}/
-            
-  #register
-    %h2 
-      %a{:href => "http://mexicocity.startupweekend.org"} Regístrate ahora
-    %p Elige el tipo de boleto más adecuado para tu perfil ya sea desarrollo, diseño o  negocios.
-    %blockquote ¡El boleto incluye 7 comidas, y bebidas durante todo el fin de semana! 
+%article.newsletter(data-bg="9da3aa" data-color="3c3e3f")
+  .section-header
+    %h2 Suscríbete
     :plain
-      <iframe src="http://www.eventbrite.com/tickets-external?eid=2072040529&ref=etckt" frameborder="0" height="360px" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
-  
-  #organizers
-    %h2 Organizadores
-    %p Startup Weekend a nivel local es organizado por un grupo de emprendedores apasionados que trabajan en esto de forma voluntaria.
-    %ul
-      %li 
-        %img{:src => "/images/organizadores/santiago_zavala.jpg"}
-        %p Santiago Zavala
-        %a.email{:href => "mailto:santiago@mexican.vc"} santiago@mexican.vc
-        %a.twitter{:href => "http://twitter.com/dfect" } http://twitter.com/dfect
-      %li
-        %img{:src => "/images/organizadores/eduardo_serrano.jpg"}
-        %p Eduardo Serrano
-        %a.email{:href => "mailto:guayosr@gmail.com"} guayosr@gmail.com
-        %a.twitter{:href => "http://twitter.com/guayosr"} http://twitter.com/guayosr
-      %li 
-        %img{:src => "/images/organizadores/cesar_salazar.jpg"}
-        %p César Salazar
-        %a.email{:href => "mailto:cesar@mexican.vc"} cesar@mexican.vc
-        %a.twitter{:href => "http://twitter.com/cesarsalazar"} http://twitter.com/cesarsalazar
-      %li 
-        %img{:src => "/images/organizadores/jose_akle.jpg"}
-        %p José Akle
-        %a.email{:href => "mailto:joseakle@gmail.com"} joseakle@gmail.com
-      %li 
-        %img{:src => "/images/organizadores/mariana_montoya.jpg"}
-        %p Mariana Montoya
-        %a.email{:href => "mailto:m.montoya@itesm.mx"} m.montoya@itesm.mx
-
-  
-  
-
-      
+      <form action="http://earlyadopters.us2.list-manage.com/subscribe/post?u=5a2b3b4890e0680920a6350f6&amp;id=40612bfdb8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Correo electrónico" required>
+      <input type="submit" value="Suscribirme" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </form>
+  .content

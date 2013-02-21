@@ -1,0 +1,42 @@
+@import 'reset', 'palette', 'fonts', 'mixins', 'forms'
+ 
+body
+  font-family: "Source Sans Pro", sans-serif
+  font-weight: 300
+  font-size: 1.125em
+  color: $white
+
+*
+  @include intuitive-box
+
+h1
+  font-size: 4em
+  margin-bottom: 0.5em
+  text-align: center
+  
+h2
+  font-size: 2em
+  margin-top: 1em
+  margin-bottom: 0.5em
+  text-transform: uppercase
+
+p
+  margin-bottom: 1em
+  line-height: 125%
+a
+  color: $white
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+ul
+  list-style: circle inside
+
+ol
+  list-style: decimal inside
+  
+li
+  margin-bottom: 1em
+  line-height: 1
+  color: $black
+  

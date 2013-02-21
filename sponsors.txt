@@ -1,9 +1,0 @@
-- Google
-- .CO
-- BizSpark
-- CloudMine
-- SendGrid
-- Startup Labs
-
-- Angel Ventures
-- Taxidermie
