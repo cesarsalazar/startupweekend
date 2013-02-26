@@ -1,0 +1,124 @@
+@import "global"
+
+$top-padding: 180px
+$menu-w: 18.54%
+$header-w: 30%
+
+body
+  -webkit-transition: background-color 0.3s ease-in-out
+  transition: background-color 0.3s ease-in-out
+
+
+#global-menu
+  position: fixed
+  left: 0
+  top: 0
+  width: 18.54%
+  height: 100%
+  z-index: 10
+  header
+    width: 150px
+    height: 330px
+    margin: 30px auto 0
+    img
+      max-width: 100%
+  .menu
+    width: 150px
+    margin: 30px auto
+    a
+      display: block
+      padding: 8px 5px
+      &.tickets_btn
+        background: white
+        width: 100%
+      &.active
+        font-weight: bold
+
+article
+  width: 78.54%
+  margin-left: $menu-w
+  clear: both
+  .section-header
+    h2
+      font-family: 'League Gothic'
+      font-size: 4em
+      margin-top: 0
+      text-align: left
+    top: 0
+    left: 0
+    position: fixed
+    z-index: 1
+    height: 100%
+    margin-left: $menu-w
+    padding-top: $top-padding
+    opacity: 0
+    -webkit-transition: opacity 0.3s ease-in-out
+    transition: opacity 0.3s ease-in-out
+    .wrap
+      width: $header-w
+      color: white
+  .content
+    h2
+      font-family: 'League Gothic'
+    color: white
+    width: 48.54%
+    float: right
+    padding-top: $top-padding
+    min-height: 784px
+    opacity: 0
+
+article.fixed
+  .section-header
+    opacity: 1
+    z-index: 8
+  .content
+    opacity: 1
+
+.sponsors
+  &#local
+    margin-bottom: 0
+    background: transparent
+    &:before
+      content: "Patrocinadores locales"
+      display: block
+      margin-bottom: 15px
+  &#global
+    background: white
+    padding: 15px
+    margin-bottom: 1em
+  ul
+    list-style: none
+    display: table
+    li
+      display: table-cell
+      vertical-align: middle
+      text-align: center
+      width: 200px
+      margin-bottom: 0
+      a
+        cursor: pointer
+      &:last-child
+        padding-right: 0px
+
+.people
+  margin-bottom: 4em
+  h2
+    text-align: center
+    margin: 0.2em 0
+  img
+    margin: 0 auto
+    width: 100px
+    height: 100px
+    display: block
+
+.newsletter
+  form
+    input[type="email"]
+      display: inline-block
+      font-weight: 300
+      padding: 0.5em
+      float: left
+      width: 300px
+      margin-right: 5px
+    input[type="submit"]
+      @include button

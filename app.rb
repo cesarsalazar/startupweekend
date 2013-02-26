@@ -1,44 +1,46 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/content_for'
-require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
 require 'rdiscount'
+require 'coffee-script'
 
-before do
-  cache_control( :public, :must_revalidate, :max_age => 3600 ) unless development?
+class SassEngine < Sinatra::Base
+
+  set :views,   File.dirname(__FILE__)    + '/assets/sass'
+
+  get '/stylesheets/*.css' do
+    filename = params[:splat].first
+    sass filename.to_sym
+  end
+
 end
 
-get '/' do
-  haml :new
+class CoffeeEngine < Sinatra::Base
+
+  set :views,   File.dirname(__FILE__)    + '/assets/coffeescript'
+
+  get "/javascripts/*.js" do
+    filename = params[:splat].first
+    coffee filename.to_sym
+  end
+
 end
 
-get '/programa' do
-  haml :programa
-end
+class SWApplication < Sinatra::Base
+  set :views,   File.dirname(__FILE__)    + '/views'
+  set :public_folder,  File.dirname(__FILE__)    + '/public'
+  helpers Sinatra::ContentFor
+  use SassEngine
+  use CoffeeEngine
 
-get '/participantes' do
-  haml :participantes
-end
+  before do
+    cache_control( :public, :must_revalidate, :max_age => 3600 ) unless development?
+  end
 
-get '/mentores' do
-  haml :mentores
-end
-
-get '/lugar' do
-  haml :lugar
-end
-
-get '/inscripciones' do
-  haml :inscripciones
-end
-
-get '/equipo' do
-  haml :equipo
-end
-
-get '/stylesheets/*' do
-  content_type 'text/css'
-  sass '../styles/'.concat(params[:splat].join.chomp('.css')).to_sym
+  get '/' do
+    # Encoding.default_internal = Encoding::UTF_8
+    haml :index
+  end
 end
